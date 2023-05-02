@@ -1,16 +1,18 @@
 ---
-name: 'nextjs-pj-template'
-root: '.'
-output: '**/*'
-ignore: []
+name: "generate-component"
+root: "."
+output: "./src/components/"
 questions:
-  value: 'Please enter any text.'
+  name: "Please enter a component name."
+  story:
+    confirm: "Do you need a story?"
+    initial: true
 ---
 
 # `{{ inputs.name | pascal }}/index.ts`
 
 ```typescript
-export * from './{{ inputs.name }}';
+export * from "./{{ inputs.name }}";
 ```
 
 # `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.tsx`
@@ -31,4 +33,3 @@ import { {{ inputs.name | pascal }} } from './{{ inputs.name | pascal }}';
 export default { component: {{ inputs.name | pascal }} };
 export const Overview = { args: {} };
 ```
-
