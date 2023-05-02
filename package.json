@@ -20,6 +20,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "sass": "^1.62.0"
+    "sass": "^1.62.0",
+    "scaffdog": "^2.5.0"
   }
 }
