@@ -1,5 +1,18 @@
 import { Coordinate } from "@/components/views/Coordinate";
+import { useCoordinateMutators } from "@/stores/Coordinate";
+import { UseForecast } from "@/usecases/Forecast";
+import { useEffect } from "react";
 
-export default () => {
-  return <Coordinate />;
+export default (props: any) => {
+  const { update } = useCoordinateMutators();
+
+  useEffect(() => {
+    update({ coordinate: props.forecastResult[0].publishingOffice });
+  }, []);
+
+  return <Coordinate {...props} />;
 };
+
+export async function getStaticProps() {
+  return await UseForecast();
+}
