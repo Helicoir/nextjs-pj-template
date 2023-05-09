@@ -8,6 +8,8 @@
     "=====": "=====",
     "dev:app": "next dev --port 19834",
     "dev:storybook": "storybook dev -p 6006",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "make:scaffolding": "scaffdog generate",
     "build:app": "next build",
     "build:storybook": "storybook build"
