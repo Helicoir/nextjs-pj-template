@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRecoilSnapshot } from "recoil";
 
-function DebugObserver(): React.Node {
+function DebugObserver() {
   const snapshot = useRecoilSnapshot();
   useEffect(() => {
     for (const node of snapshot.getNodes_UNSTABLE({ isModified: true })) {

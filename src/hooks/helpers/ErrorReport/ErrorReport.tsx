@@ -3,5 +3,6 @@ export type ErrorReportHelperType = {
 };
 
 export const useErrorReportHelper = function ({ err }: ErrorReportHelperType) {
+  // useReportSomething
   console.error(`ErrorReport error: ${err}`);
 };

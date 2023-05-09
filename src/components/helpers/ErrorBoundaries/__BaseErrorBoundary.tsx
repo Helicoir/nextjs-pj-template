@@ -22,6 +22,9 @@ export class BaseErrorBoundary extends React.Component<Props, State> {
   }
 
   componentDidCatch(error: unknown, info: React.ErrorInfo) {
+    console.log(error);
+    console.log(typeof error);
+    console.log(error instanceof Error);
     this.props.onError?.(error);
   }
 

@@ -21,12 +21,11 @@ export const ReportingErrorBoundary = ({
   children: ReactNode;
 }) => {
   const onError = useCallback((err: unknown) => {
-    // useReportSomething
     useErrorReportHelper({ err });
   }, []);
 
   const renderFallback = useCallback(
-    (error: unknown) => fallbackComponent({ error }),
+    (error: unknown) => fallbackComponent(error),
     []
   );
   return (

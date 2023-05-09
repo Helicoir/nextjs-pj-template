@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --fix",
     "=====": "=====",
     "dev:app": "next dev --port 19834",
     "dev:storybook": "storybook dev -p 6006",
-    "test": "jest",
+    "test": "yarn lint && jest",
     "test:watch": "jest --watch",
     "make:scaffolding": "scaffdog generate",
     "build:app": "next build",

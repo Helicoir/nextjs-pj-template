@@ -3,7 +3,7 @@ import { useCoordinateMutators } from "@/stores/Coordinate";
 import { UseForecast } from "@/usecases/Forecast";
 import { useEffect } from "react";
 
-export default (props: any) => {
+const CoordinatesPage = (props: any) => {
   const { update } = useCoordinateMutators();
 
   useEffect(() => {
@@ -16,3 +16,5 @@ export default (props: any) => {
 export async function getStaticProps() {
   return await UseForecast();
 }
+
+export default CoordinatesPage;
