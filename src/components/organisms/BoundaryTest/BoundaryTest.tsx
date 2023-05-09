@@ -1,5 +1,4 @@
 import { ReportingErrorBoundary } from "@/components/helpers/ErrorBoundaries/ReportingErrorBoundary";
-import { UseForecastReject } from "@/usecases/Forecast";
 import { useEffect } from "react";
 
 export type Props = {};

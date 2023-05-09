@@ -14,16 +14,3 @@ export const UseForecast = async function () {
     props: { forecastResult },
   };
 };
-
-export const UseForecastReject = async function () {
-  const forecastResult = await fetch(
-    `${BaseURL}${ForecastAreaID.GUNMA}.json`
-  ).then((r) => {
-    // console.log(r);
-    throw r.json();
-  });
-
-  return {
-    props: { forecastResult },
-  };
-};
