@@ -9,23 +9,22 @@ questions:
 # `{{ inputs.name | pascal }}/index.tsx`
 
 ```tsx
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
+import React from 'react';
+import styles from './{{ inputs.name | pascal }}.module.scss'
 
-export type Props = React.PropsWithChildren<{}>;
+export type Props = {};
 
 export const {{ inputs.name | pascal }}: React.FC<Props> = ({ children }) => {
   return (
-    <RecoilRoot>
       <main>
         {children}
       </main>
-    </RecoilRoot>
   );
 };
+```
+
+# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.module.scss`
+
+```scss
+// write stylesheet here
 ```

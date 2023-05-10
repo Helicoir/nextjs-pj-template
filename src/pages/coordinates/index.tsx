@@ -10,6 +10,8 @@ const CoordinatesPage = (props: any) => {
     update({ coordinate: props.forecastResult[0].publishingOffice });
   }, []);
 
+  useEffect(() => console.log("rendered"), []);
+
   return <Coordinate {...props} />;
 };
 

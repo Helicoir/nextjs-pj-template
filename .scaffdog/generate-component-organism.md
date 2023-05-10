@@ -4,9 +4,6 @@ root: "."
 output: "./src/components/organisms"
 questions:
   name: "Please enter a organism component name."
-  story:
-    confirm: "Do you need a story?"
-    initial: true
 ---
 
 # `{{ inputs.name | pascal }}/index.ts`
@@ -18,18 +15,27 @@ export * from "./{{ inputs.name }}";
 # `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.tsx`
 
 ```typescript
-export type Props = JSX.Elements<{}>;
+import React from 'react';
+import styles from './{{ inputs.name | pascal }}.module.scss'
 
-export const {{ inputs.name | pascal }}: React.FC<Props> = () => {
-  return <div>{children}</div>;
+export type Props = {};
+
+export const {{ inputs.name | pascal }}: React.FC<Props> = ({}: Props) => {
+  return <div>aaaa</div>;
 };
 ```
 
-# `{{ !inputs.story && '!' }}{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.stories.tsx`
+# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.stories.tsx`
 
 ```typescript
 import { {{ inputs.name | pascal }} } from './{{ inputs.name | pascal }}';
 
 export default { component: {{ inputs.name | pascal }} };
 export const Overview = { args: {} };
+```
+
+# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.module.scss`
+
+```typescript
+// write stylesheet here
 ```
