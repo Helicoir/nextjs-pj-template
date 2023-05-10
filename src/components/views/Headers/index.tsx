@@ -8,10 +8,10 @@ const headerList = {
   DEFAULT_HEADER: "DEFAULT_HEADER",
 };
 
-const RenderHeaders = React.memo(({ pathname }: RenderHeadersProps) => {
+const RenderHeaders = React.memo(({}: RenderHeadersProps) => {
   const matchHeaderName = useMemo(() => {
     return headerList.DEFAULT_HEADER;
-  }, [pathname]);
+  }, []);
   return (
     <>{matchHeaderName === headerList.DEFAULT_HEADER && <DefaultHeader />}</>
   );
