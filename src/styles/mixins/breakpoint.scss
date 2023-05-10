@@ -1,0 +1,19 @@
+$breakpoints: (
+  "tb": var(--media-tb),
+  "pc-s": var(--media-pc-s),
+  "pc-m": var(--media-pc-m),
+  "pc-l": var(--media-pc-l),
+);
+
+// モバイルファーストでcssを書いてほしいため、基本的にmtでmedia queryを指定し、media query指定なしのstyleがモバイルに当たるようにしてください
+@mixin mt($size) {
+  @media screen and (min-width: #{map-get($breakpoints, $size)}) {
+    @content;
+  }
+}
+
+@mixin lt($size) {
+  @media screen and (max-width: #{map-get($breakpoints, $size)}) {
+    @content;
+  }
+}

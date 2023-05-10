@@ -1,0 +1,9 @@
+:root {
+  // media-query用 デバイスサイズ定義
+  // 自身の定義値〜直前の定義値を自身のデバイスサイズとする。
+  // 例: タブレットサイズ →→ 576px 〜 768px（ media-tb〜media-pc-s ）
+  --media-tb: 576px
+  --media-pc-s: 768px
+  --media-pc-m: 992px
+  --media-pc-l: 1200px
+}
