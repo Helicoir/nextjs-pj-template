@@ -11,7 +11,7 @@
     "test": "yarn lint && jest",
     "test:watch": "jest --watch",
     "start": "next start",
-    "make:scaffolding": "scaffdog generate",
+    "make:scaffolding": "scaffdog generate"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.5",
