@@ -23,5 +23,10 @@ export const Use{{ inputs.name | pascal }} = function() {};
 # `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.spec.ts`
 
 ```typescript
-// test
+describe("usecases/{{ inputs.name | pascal }}", () => {
+  test("テスト", () => {
+    expect(true).toEqual(true);
+  });
+});
+
 ```

@@ -23,5 +23,9 @@ export const {{ inputs.name | pascal }}Helper = function({}: {{ inputs.name | pa
 # `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.spec.tsx`
 
 ```typescript
-// {{ inputs.name | pascal }}/{{ inputs.name | pascal }}
+describe("hooks/helpers/{{ inputs.name | pascal }}", () => {
+  test("テスト", () => {
+    expect(true).toEqual(true);
+  });
+});
 ```
