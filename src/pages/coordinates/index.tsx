@@ -1,4 +1,4 @@
-import { Coordinate } from "@/components/views/Coordinate";
+import { Coordinate } from "@/components/templates/Coordinate";
 import { useCoordinateMutators } from "@/stores/Coordinate";
 import { UseForecast } from "@/usecases/Forecast";
 import { useEffect } from "react";

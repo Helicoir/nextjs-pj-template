@@ -2,7 +2,7 @@ import "@/styles/globals.scss";
 import { RecoilRoot } from "recoil";
 import type { AppProps } from "next/app";
 import DebugObserver from "./__global/recoilDebuger";
-import { Headers } from "@/components/views/Headers";
+import { Headers } from "@/components/templates/Headers";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Suspense } from "react";
 import { PreventCrashErrorBoundary } from "@/components/helpers/ErrorBoundaries/PreventCrashErrorBoundary";
