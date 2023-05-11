@@ -1,5 +1,5 @@
 import { Coordinate } from "@/components/templates/Coordinate";
-import { useCoordinateMutators } from "@/stores/Coordinate";
+import { useCoordinateMutators, useCoordinateState } from "@/stores/Coordinate";
 import { UseForecast } from "@/usecases/Forecast";
 import { useEffect } from "react";
 
