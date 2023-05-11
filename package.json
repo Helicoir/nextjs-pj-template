@@ -3,16 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "next start",
-    "lint": "next lint --fix",
-    "=====": "=====",
-    "dev:app": "next dev --port 19834",
+    "dev": "next dev --port 19834",
     "dev:storybook": "storybook dev -p 6006",
+    "build": "next build",
+    "build:storybook": "storybook build",
+    "lint": "next lint --fix",
     "test": "yarn lint && jest",
     "test:watch": "jest --watch",
+    "start": "next start",
     "make:scaffolding": "scaffdog generate",
-    "build:app": "next build",
-    "build:storybook": "storybook build"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.5",
