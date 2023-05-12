@@ -1,9 +1,9 @@
 ---
-name: "generate-view-component"
+name: "generate-component-templates"
 root: "."
-output: "./src/components/views"
+output: "./src/components/templates"
 questions:
-  name: "Please enter a view component name."
+  name: "Please enter a component name."
 ---
 
 # `{{ inputs.name | pascal }}/index.tsx`

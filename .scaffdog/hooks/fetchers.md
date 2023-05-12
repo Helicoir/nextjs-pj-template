@@ -25,7 +25,7 @@ export const use{{ inputs.name | pascal }}Fetcher = function({}: {{ inputs.name 
 };
 ```
 
-# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.spec.tsx`
+# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.spec.ts`
 
 ```typescript
 // {{ inputs.name | pascal }}/{{ inputs.name | pascal }}

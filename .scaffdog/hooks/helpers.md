@@ -20,7 +20,7 @@ export type {{ inputs.name | pascal }}HelperType = {};
 export const {{ inputs.name | pascal }}Helper = function({}: {{ inputs.name | pascal }}HelperType) {};
 ```
 
-# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.spec.tsx`
+# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.spec.ts`
 
 ```typescript
 describe("hooks/helpers/{{ inputs.name | pascal }}", () => {
