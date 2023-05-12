@@ -21,7 +21,7 @@ export const useQueryManager = <
 ) => {
   return useQuery({
     queryKey,
-    queryFn: async () => fetcher(queryKey[1]),
+    queryFn: () => fetcher(queryKey[1]),
     ...options,
   });
 };

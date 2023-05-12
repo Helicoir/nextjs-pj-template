@@ -1,13 +1,12 @@
 import React, { Suspense, useCallback, useState } from "react";
 import styles from "./Pokemon.module.scss";
-import { UseFindByPokemonName } from "@/usecases/FindByPokemonName";
+import { PokemonDetail } from "@/components/organisms/PokemonDetail";
+import { ErrorBoundaryProvider } from "@/components/helpers/ErrorBoundaries/ErrorBoundaryProvider";
 
 type Props = {};
 
 export const Pokemon: React.FC<Props> = () => {
   const [pokemonId, setPokemonId] = useState(331);
-  const { data, isLoading } = UseFindByPokemonName({ pokemonId });
-
   const onChange = useCallback(
     (event: any) => setPokemonId(event.target.value),
     []
@@ -16,14 +15,9 @@ export const Pokemon: React.FC<Props> = () => {
   return (
     <main>
       <input type="text" onChange={onChange} />
-      <p>{isLoading}</p>
-      {!isLoading && (
-        <>
-          <img src={data.sprites.front_default} alt="aa" />
-          <p>pokemonpage</p>
-          <p>yaaa</p>
-        </>
-      )}
+      <ErrorBoundaryProvider>
+        <PokemonDetail pokemonId={pokemonId} />
+      </ErrorBoundaryProvider>
     </main>
   );
 };

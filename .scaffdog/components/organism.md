@@ -21,7 +21,7 @@ import styles from './{{ inputs.name | pascal }}.module.scss'
 
 export type Props = {};
 
-export const {{ inputs.name | pascal }}: React.FC<Props> = ({}: Props) => {
+export const {{ inputs.name | pascal }}: React.FC<Props> = ({}) => {
   return <div>aaaa</div>;
 };
 ```

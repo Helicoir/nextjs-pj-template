@@ -8,6 +8,7 @@ export const APIEndpoints = {
   TEST_HELLO_ENDPOINT: `${baseUrl}/hello`,
   TEST_COORDINATE_ENDPOINT: `${baseUrl}/coordinates`,
   POKEMON_NAME: `${POKEAPI_BASEURL}/pokemon`,
+  POKEMON_SPECIES: `${POKEAPI_BASEURL}/pokemon-species`,
 };
 
 export type APIEndpointName = keyof typeof APIEndpoints;

@@ -7,7 +7,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Suspense } from "react";
 import { PreventCrashErrorBoundary } from "@/components/helpers/ErrorBoundaries/PreventCrashErrorBoundary";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      suspense: true,
+    },
+  },
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
