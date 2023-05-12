@@ -6,3 +6,5 @@ export const ForecastAreaID = {
   CHIBA: "120000",
   TOKYO: "130000",
 };
+
+export const POKEAPI_BASEURL = "https://pokeapi.co/api/v2/";
