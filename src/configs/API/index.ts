@@ -7,4 +7,4 @@ export const ForecastAreaID = {
   TOKYO: "130000",
 };
 
-export const POKEAPI_BASEURL = "https://pokeapi.co/api/v2/";
+export const POKEAPI_BASEURL = "https://pokeapi.co/api/v2";

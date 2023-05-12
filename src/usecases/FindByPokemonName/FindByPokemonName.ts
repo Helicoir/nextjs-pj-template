@@ -6,5 +6,5 @@ export const UseFindByPokemonName: UseFindByPokemonNameType = function ({
   pokemonId,
 }) {
   const { data, isLoading } = usePokeApiFetcher({ pokemonId });
-  return { data };
+  return { data, isLoading };
 };
