@@ -1,1 +1,1 @@
-export * from "./findByPokemonName";
+export * from "./FindByPokemonName";
