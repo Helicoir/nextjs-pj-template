@@ -1,7 +1,8 @@
 ---
-name: "generate-component-organisms"
+name: "generate: component - organisms"
 root: "."
 output: "./src/components/organisms"
+ignore: ["."]
 questions:
   name: "Please enter a organism component name."
 ---
@@ -38,4 +39,14 @@ export const Overview = { args: {} };
 
 ```typescript
 // write stylesheet here
+```
+
+# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.spec.ts`
+
+```typescript
+describe("{{ output.dir }}/{{ inputs.name | pascal }}", () => {
+  test("テスト", () => {
+    expect(true).toEqual(true);
+  });
+});
 ```

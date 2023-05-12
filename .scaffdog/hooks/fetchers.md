@@ -1,7 +1,8 @@
 ---
-name: "generate: hooks/fetchers"
+name: "generate: hooks - fetchers"
 root: "."
 output: "./src/hooks/fetchers"
+ignore: ["."]
 questions:
   name: "Enter the fetcher name..."
 ---

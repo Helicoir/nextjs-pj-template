@@ -1,7 +1,8 @@
 ---
-name: "generate-component-templates"
+name: "generate: component - templates"
 root: "."
 output: "./src/components/templates"
+ignore: ["."]
 questions:
   name: "Please enter a component name."
 ---

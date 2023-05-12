@@ -1,7 +1,8 @@
 ---
-name: "generate-hooks-helpers"
+name: "generate: hooks - helpers"
 root: "."
 output: "./src/hooks/helpers"
+ignore: ["."]
 questions:
   name: "Please enter a helper name."
 ---

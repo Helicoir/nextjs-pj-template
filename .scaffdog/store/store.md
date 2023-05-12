@@ -1,7 +1,8 @@
 ---
-name: "generate-store"
+name: "generate: store"
 root: "."
 output: "./src/stores"
+ignore: ["."]
 questions:
   name: "src/components/stores 配下にrecoil stateを作成します。\n⚠️ 他のファイルと名前がかぶらないようにしてください。\nEnter file name ✏️"
 ---

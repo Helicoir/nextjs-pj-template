@@ -1,7 +1,8 @@
 ---
-name: "generate-usecase"
+name: "generate: usecase"
 root: "."
 output: "./src/usecases"
+ignore: ["."]
 questions:
   name: "Please enter a component name."
 ---
@@ -23,10 +24,9 @@ export const Use{{ inputs.name | pascal }} = function() {};
 # `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.spec.ts`
 
 ```typescript
-describe("usecases/{{ inputs.name | pascal }}", () => {
+describe("{{ output.dir }}/{{ inputs.name | pascal }}", () => {
   test("テスト", () => {
     expect(true).toEqual(true);
   });
 });
-
 ```
