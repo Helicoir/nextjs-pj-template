@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./PokemonDetail.module.scss";
 import { UseFindByPokemonName } from "@/usecases/FindByPokemonName";
 
 export type Props = {
