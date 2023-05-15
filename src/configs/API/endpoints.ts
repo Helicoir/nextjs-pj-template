@@ -6,7 +6,6 @@ const baseUrl = "/api";
 export const APIEndpoints = {
   TEST_ENDPOINT: `${baseUrl}/sample`,
   TEST_HELLO_ENDPOINT: `${baseUrl}/hello`,
-  TEST_COORDINATE_ENDPOINT: `${baseUrl}/coordinates`,
   POKEMON_NAME: `${POKEAPI_BASEURL}/pokemon`,
   POKEMON_SPECIES: `${POKEAPI_BASEURL}/pokemon-species`,
 };
