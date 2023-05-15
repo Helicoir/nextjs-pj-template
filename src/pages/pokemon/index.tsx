@@ -1,24 +1,27 @@
 import { Pokemon } from "@/components/templates/Pokemon";
 import {
+  usePokeApiFetcher,
   usePokeApiPrefetcher,
   usePokemonSpeciesPrefetch,
 } from "@/hooks/fetchers/PokeApi";
-import { QueryClient, dehydrate } from "@tanstack/react-query";
+import { DehydratedState, QueryClient, dehydrate } from "@tanstack/react-query";
 
-const PokemonPage = (props: any) => {
-  console.log(props);
+type Props = { dehydratedState: DehydratedState };
+
+const PokemonPage = (props: Props) => {
+  props.dehydratedState.queries.forEach((q) => console.log(q.state.data));
   return <Pokemon />;
 };
 
 export async function getStaticProps() {
   const queryClientForPrefetch = new QueryClient();
-  usePokeApiPrefetcher({
+  await usePokeApiPrefetcher({
     queryClientForPrefetch,
-    pokemonId: 600,
+    pokemonId: 432,
   });
-  usePokemonSpeciesPrefetch({
+  await usePokemonSpeciesPrefetch({
     queryClientForPrefetch,
-    pokemonId: 600,
+    pokemonId: 432,
   });
 
   return {
