@@ -12,17 +12,19 @@ const PokemonPage = (props: any) => {
 
 export async function getStaticProps() {
   const queryClientForPrefetch = new QueryClient();
-  const {} = usePokeApiPrefetcher({
+  usePokeApiPrefetcher({
     queryClientForPrefetch,
-    pokemonId: 1000,
+    pokemonId: 600,
   });
-  const {} = usePokemonSpeciesPrefetch({
+  usePokemonSpeciesPrefetch({
     queryClientForPrefetch,
-    pokemonId: 1000,
+    pokemonId: 600,
   });
 
   return {
-    dehydratedState: dehydrate(queryClientForPrefetch),
+    props: {
+      dehydratedState: dehydrate(queryClientForPrefetch),
+    },
   };
 }
 
